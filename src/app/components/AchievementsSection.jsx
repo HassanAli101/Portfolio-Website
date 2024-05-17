@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
+import {motion} from "framer-motion";
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -35,12 +36,14 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
-              <h2 className="text-white text-4xl font-bold flex flex-row">
-                {achievement.prefix}
+              <motion.h2 className="text-white text-4xl font-bold flex flex-row">
                 <AnimatedNumbers
                   includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
+                  transitions={(index) => ({
+                    type: "spring",
+                    duration: index + 0.3,
+                  })}
+                  animateToNumber={Number(achievement.value)}
                   className="text-white text-4xl font-bold"
                   configs={(_, index) => {
                     return {
@@ -51,7 +54,7 @@ const AchievementsSection = () => {
                   }}
                 />
                 {achievement.postfix}
-              </h2>
+              </motion.h2>
               <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
             </div>
           );

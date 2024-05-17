@@ -8,7 +8,7 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description: "This is a portfolio website i made using NextJS, mostly to learn and improve frontend frameworks",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -16,17 +16,17 @@ const projectsData = [
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "CS100 Virtual TA",
+    description: "This is a virtual Teaching Assistant I made using MERN stack and Google gemini API for NodeJS. This demonstrates my Willingness to solve real world problems and demonstrate my understanding of how LLMs work along with MERN stack",
     image: "/images/projects/2.png",
-    tag: ["All", "Web"],
+    tag: ["All", "AI/ML"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Campus Cuisine",
+    description: "This is an intra-campus food delivery app made with MERN stack to bring all the student-vendors, eateries, delivery students and customers under one roof. before this, whatsapp was commonly used to execute the process independently. This also provides on campus earning opportunities to students.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -34,28 +34,19 @@ const projectsData = [
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "Auctioning App",
+    description: "An Auctioning app I made to learn and demonstrate socket programming using MERN stack, it allows anyone to create auctions and other users can join an auction and place bids in real time.",
     image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
+    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "Insights",
+    description: "This is one of my ongoing projects in which i will learn and try to scrape data from PSX website using scrapy, extract it, perform EDA on it and try to extract meaningful insights from it using scikit learn. perhaps even deploy it with FAST API, but yet to explore that",
     image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
+    tag: ["All", "AL/ML"],
     gitUrl: "/",
     previewUrl: "/",
   },
@@ -97,8 +88,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="AI/ML"
+          isSelected={tag === "AI/ML"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
