@@ -2,6 +2,7 @@
 import React, { useRef } from "react";
 import JourneyCard from "./DSAJourneyCard";
 import { motion, useInView } from "framer-motion";
+import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
 
 const projectsData = [
   {
@@ -199,15 +200,17 @@ const DSAJourney = ({ setSelectedProject }) => {
   };
   return (
     <section id="Journey">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+      <div className="flex items-center justify-between">
+      <button
+        onClick={() => setSelectedProject(0)}
+        className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white"
+      >
+        <ArrowLongLeftIcon className="h-5 w-5" />
+      </button>
+      <h2 className="text-center text-4xl font-bold text-white mt-12 mb-8 md:mb-12 mx-auto">
         DSA
       </h2>
-      <button
-          className="px-4 py-2 bg-blue-500 text-white rounded"
-          onClick={() => setSelectedProject(0)}
-        >
-          Back to Projects
-        </button>
+      </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {projectsData.map((project, index) => (
           <motion.li
