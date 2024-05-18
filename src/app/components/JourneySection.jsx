@@ -9,19 +9,19 @@ const projectsData = [
     id: 1,
     title: "Web Development",
     description: "A look into how i started liking Web Development",
-    image: "/images/projects/1.png",
+    image: "/images/Journey/Dev.jpeg",
   },
   {
     id: 2,
     title: "Data Structures and Algorithms",
     description: "A look into how i practice DSA concepts and my learnings from them",
-    image: "/images/projects/2.png",
+    image: "/images/Journey/DSA.png",
   },
   {
     id: 3,
     title: "Artificial Intelligence",
     description: "A deep dive into my love for AI, which initiated this whole passion for CS in the first place",
-    image: "/images/projects/3.png",
+    image: "/images/Journey/AI.png",
   },
 ];
 
