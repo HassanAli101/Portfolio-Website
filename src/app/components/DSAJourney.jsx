@@ -195,7 +195,38 @@ const projectsData = [
     methodology: "Same as problem 104, just reverse the condition at the end. (instead of return maximum depth, return minimum depth)",
     image: "/images/Journey/lc_js.jpg",
   },
-  
+  {
+    id: 25,
+    title: "Problem 112 Path Sum",
+    description: "Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.",
+    learnings: "Okay so im seeing a bit of a trend here. When a TargetSum esque question is given, think of trying to attempt it by subtracting the current number from it. in this case, i did the same, explained in methodology; also, another thing i noticed. when working with trees and want to test something on both left and right nodes, the return statement can be used with a logical operator to return true if any of the left or right nodes return true.",
+    methodology: "base case if root is null then return false, if targetsum - root.val is 0 and root is a leaf node (left right are null) then return true. otherwise, return a recursive function call with left and right nodes and targetsum - root.val (logical OR)",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 26,
+    title: "",
+    description: "",
+    learnings: "",
+    methodology: "",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 27,
+    title: "",
+    description: "",
+    learnings: "",
+    methodology: "",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 28,
+    title: "",
+    description: "",
+    learnings: "",
+    methodology: "",
+    image: "/images/Journey/lc_js.jpg",
+  },
 ];
 
 const DSAJourney = ({ setSelectedProject }) => {
