@@ -221,10 +221,18 @@ const projectsData = [
   },
   {
     id: 28,
-    title: "",
-    description: "",
-    learnings: "",
-    methodology: "",
+    title: "121. Best Time to Buy and Sell Stock",
+    description: "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
+    learnings: "From now onwards, i will be keeping track of useful algorithms. for example, in this question, the kadane's algorithm is used, also called the sliding window algorithm. [add description here after watching yt video]",
+    methodology: "we take lowestSell (of when can i least buy it) and highest profit of onwards it. since we have to sell after buying it, only one pass of the array is needed. we use a for loop, in it, if prices are less than lowestSell, then assign prices[i] to LowestSell. and for each iteration, use Math.max to assign highestproft prices[i]- lowestSell or itself. eventually return highestProfit",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 29,
+    title: "125. Valid Palindrome",
+    description: "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.",
+    learnings: "first of all, the toLowerCase() function is used to convert a string to lowercase. Also, the replace() function is used to replace a substring with another substring. Also, the regular expression [^a-z0-9] is used to remove all non-alphanumeric characters. its syntax is s.replace(/[^a-zA-Z0-9]/g, '') ",
+    methodology: "using the two pointers approach, use  while loop if left < right and matched. then in it, use an if condition to check if left right indexes match, if they do, bring them closer, else, turn matched to false and return false. outside while. return true",
     image: "/images/Journey/lc_js.jpg",
   },
 ];
