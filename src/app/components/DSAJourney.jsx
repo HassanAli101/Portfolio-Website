@@ -223,8 +223,8 @@ const projectsData = [
     id: 28,
     title: "121. Best Time to Buy and Sell Stock",
     description: "You are given an array prices where prices[i] is the price of a given stock on the ith day. You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.",
-    learnings: "From now onwards, i will be keeping track of useful algorithms. for example, in this question, the kadane's algorithm is used, also called the sliding window algorithm. [add description here after watching yt video]",
-    methodology: "we take lowestSell (of when can i least buy it) and highest profit of onwards it. since we have to sell after buying it, only one pass of the array is needed. we use a for loop, in it, if prices are less than lowestSell, then assign prices[i] to LowestSell. and for each iteration, use Math.max to assign highestproft prices[i]- lowestSell or itself. eventually return highestProfit",
+    learnings: "From now onwards, i will be keeping track of useful algorithms. for example, in this question, the kadane's algorithm is used, also called the sliding window technique. This is usually used to reduce time complecity from O(n^2) to O(n) In this approsch, we maintain 2 pointers In an example where we have to find smallest subarray which sums to a target, the right pointer increments till sum of array >= target (now, further elements are not important to us) and then the left pointer increments till sum of array < target.  This way, it only takes one pass through the array.",
+    methodology: "we take lowestSell (of when can i least buy it) and highest profit of onwards it. since we have to sell after buying it, only one pass of the array is needed. we use a for loop, in it, if prices are less than lowestSell, then assign prices[i] to LowestSell (moving the left pointer since we found a better optimal now). and for each iteration, use Math.max to assign highestproft prices[i]- lowestSell or itself (moving right pointer). eventually return highestProfit",
     image: "/images/Journey/lc_js.jpg",
   },
   {
@@ -235,6 +235,23 @@ const projectsData = [
     methodology: "using the two pointers approach, use  while loop if left < right and matched. then in it, use an if condition to check if left right indexes match, if they do, bring them closer, else, turn matched to false and return false. outside while. return true",
     image: "/images/Journey/lc_js.jpg",
   },
+  {
+    id: 30,
+    title: "136. Single Number",
+    description: "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.",
+    learnings: "Bit manipulation suddenly became important. bitwise operation XOR is used in this case using the ^ carat simble, XOR of a number with itself is 0.",
+    methodology: "initialize a variable to 0, then iterate through the array and XOR the number with the variable (same numbers bits will cancel out and return 0). at the end, only the non-same number will remain as bits, return that variable",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 31,
+    title: "141. Linked List Cycle",
+    description: "Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.",
+    learnings: "let visited = new Set(); can be made which as .has and .add methods to act as a hash map. this was how i solved it, but interestingly, there is an algorithm called tortoise and hare algorithm used to exactly detect cycles. toroise moves by 1 node and hare moves by 2 nodes. If there is a cycle, the slow and fast keep looping until eventually, they meet if they meet, there is a cycle. if hare reaches the end, then there is no cycle. To find entry point of cycle, once they meet, step them one by one until they meet again. that is the entry point of cycle.",
+    methodology: "i simply did it using hashmap, to cater to edge cases, if head or next is null, then return false. else, in a while loop, keep searching if head exists. if it does, return true, else add head to visited and then outside while loop, return false",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  
 ];
 
 const DSAJourney = ({ setSelectedProject }) => {
