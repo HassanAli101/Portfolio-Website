@@ -251,7 +251,46 @@ const projectsData = [
     methodology: "i simply did it using hashmap, to cater to edge cases, if head or next is null, then return false. else, in a while loop, keep searching if head exists. if it does, return true, else add head to visited and then outside while loop, return false",
     image: "/images/Journey/lc_js.jpg",
   },
-  
+  {
+    id: 32,
+    title: "144. Binary Tree Preorder Traversal",
+    description: "Given the root of a binary tree, return the preorder traversal of its nodes' values.",
+    learnings: "its better to make the function within the asked for function, as it can then use an array globally and fill it with pre order traversal. order is obviosly root, left, right",
+    methodology: "cater to edge cases if root is null, return empty. if left and right null, return root, then make a function dfs, base case is if node is null then return; otherwise, target.push(node.val) dfs(node.left) dfs(node.right) and return target",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 33,
+    title: "145. Binary Tree Postorder Traversal",
+    description: "Given the root of a binary tree, return the postorder traversal of its nodes' values.",
+    learnings: "nothing much, same as 144, just order of execution is different.",
+    methodology: "nothing much, same as 144, just order of execution is different. dfs(root.left) dfs(root.right) target.push(root.val) in the dfs function",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 34,
+    title: "160. Intersection of Two Linked Lists",
+    description: "Given the heads of two singly linked-lists headA and headB, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return null.",
+    learnings: "One of the better approaches would have been to concatenate both strings like A+B and B+A and then traverse them until these 2 lists dont match the same node. (while condition) and return one of the lists. if it intersected, while condition terminates and returning returns the intersecting node. else, it returns null if reaches the end",
+    methodology: "I however used a list to firstly push all entries of linkedlist A and then used another while to traverse list B and check if the node exists in list. if it does, return it else, go to next node and return null outside of while",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 35,
+    title: "168. Excel Sheet Column Title",
+    description: "Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.",
+    learnings: "The main trick here was to realize that you need to convert number from base 10 to base 26. utilizing some of the binary conversions logic :P, the learnings are that string.fromCharCode(64+ character) converts number to its ascii character",
+    methodology: "make a string result, while columnNumber > 26, extract last alphabet (by taking modulus with 26) and convert it to char and append it to result. then update columNumber with (columnNumber - last) /26 then finally, reverse your result array using split, reverse, join",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 36,
+    title: "",
+    description: "",
+    learnings: "",
+    methodology: "",
+    image: "/images/Journey/lc_js.jpg",
+  }
 ];
 
 const DSAJourney = ({ setSelectedProject }) => {
