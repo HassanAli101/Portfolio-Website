@@ -285,12 +285,36 @@ const projectsData = [
   },
   {
     id: 36,
-    title: "",
-    description: "",
-    learnings: "",
-    methodology: "",
+    title: "169. Majority Element",
+    description: "Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times. You may assume that the majority element always exists in the array.",
+    learnings: "Using a hashmap will roughly take O(n) space. but if we want to take O(1) space, then we can use Election algorithm: we keep a count variable and a candidate variable. if count is 0, then assign candidate to current element. if current element is candidate, then increment count, else decrement count. at the end, the candidate will be the majority element.",
+    methodology: "I, however, implemented it using Hashmap. i made a hashmap using hash keyword, then iterated through the array, if element exists in hashmap, increment its value, else, add it to hashmap, and keep track of majority element using highest approach. at the end, simply return majority element",
     image: "/images/Journey/lc_js.jpg",
-  }
+  },
+  {
+    id: 37,
+    title: "171. Excel Sheet Column Number",
+    description: "Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.",
+    learnings: "this question simply tested converting alphabets to base 26 numbers string.charCodeAt(0) - 64 converts a character to its ascii number. also, the Math.pow(26, power) function can be used to calculate 26^power",
+    methodology: "i used .split('').reverse() to get the characters in order and then ran a for loop over the array to get character codes and multiply them with 26^ their index at for loop",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 38,
+    title: "190. Reverse Bits",
+    description: "Reverse bits of a given 32 bits unsigned integer.",
+    learnings: "Okay so this was a bit manipulation question. the main thing to remember is that the bitwise operators are: & (and), | (or), ^ (xor), ~ (not) and << (left shift) and >> (right shift). Also, the way to get the last bit of a number is to do n & 1. and to get the first bit, do n >> 31. Also, to set the last bit of a number to 1, do n | 1 and to set the first bit to 1, do n | 1 << 31",
+    methodology: "With those learnings, i made an ans variable and ran a for loop from 0 to 31 then i used ans <<= 1 to push ans bits 1 to the left to make space for upcoming bit then i added and extracted right most bit of n using ans |= n&1 and i discarded rightmost bit of n using n>>=1. finally, ans >>>0 to return answer as a number.",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 39,
+    title: "191. Number of 1 Bits",
+    description: "Write a function that takes the binary representation of a positive integer and returns the number of set bits it has (also known as the Hamming weight).",
+    learnings: "nothing much, this was just a number to binary conversion on thing is optimization, i didnt even need to convert to binary, just place check on each conversion.",
+    methodology: "make a variable retval=0, while n>0 if n%2 == 1? retval +=1 : 0 (used ternary operator) n=Math.floor(n/2) and return retval",
+    image: "/images/Journey/lc_js.jpg",
+  },
 ];
 
 const DSAJourney = ({ setSelectedProject }) => {
