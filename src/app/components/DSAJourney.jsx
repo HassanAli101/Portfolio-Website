@@ -315,6 +315,30 @@ const projectsData = [
     methodology: "make a variable retval=0, while n>0 if n%2 == 1? retval +=1 : 0 (used ternary operator) n=Math.floor(n/2) and return retval",
     image: "/images/Journey/lc_js.jpg",
   },
+  {
+    id: 40,
+    title: "202. Happy Number",
+    description: "Write an algorithm to determine if a number n is happy. A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits. Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.",
+    learnings: "parseInt() is used to convert a character digit to a number digit.",
+    methodology: "Simply created a set of nums, then converted n to string and stored in a variable. while !NumSet.has(newNum) calculate square of digits. if they are 1, return true, else add it to set and assign check.tostring() to newNum",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 41,
+    title: "203. Remove Linked List Elements",
+    description: "Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.",
+    learnings: "recursive approaches to linked lists include checking for base, if !head then return head and if head.val == val then return removeElements(head.next, val) else, general case is head.next = removeElements(head.next,val) return head",
+    methodology: "my attempt was to use a dummy node to keep track of the head, then iterate through the linked list, if head.next.val == val, then head.next = head.next.next else head = head.next",
+    image: "/images/Journey/lc_js.jpg",
+  },
+  {
+    id: 42,
+    title: "",
+    description: "",
+    learnings: "",
+    methodology: "",
+    image: "/images/Journey/lc_js.jpg",
+  },
 ];
 
 const DSAJourney = ({ setSelectedProject }) => {
